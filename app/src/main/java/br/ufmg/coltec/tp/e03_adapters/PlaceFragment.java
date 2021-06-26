@@ -8,4 +8,8 @@ public class PlaceFragment extends Fragment {
     public PlaceFragment(){
         super(R.layout.fragment_places_details);
     }
+
+    void updatePlace(Place place){
+
+    }
 }
