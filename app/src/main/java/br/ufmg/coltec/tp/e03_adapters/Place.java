@@ -7,7 +7,7 @@ public class Place {
 
     private String name;        // nome do local
     private Integer photoId;    // id da foto do local
-    private Double distance;    // distância (em km)
+    private CharSequence distance;    // distância (em km)
     private Float rate;        // nota (1 a 5)
     private String description; // descricao do lugar
 
@@ -19,7 +19,7 @@ public class Place {
      * @param distance Distância do local em KM
      * @param rate Nota do local (1 a 5)
      */
-    public Place(String name, String description, Integer photoId, Double distance, Float rate) {
+    public Place(String name, String description, Integer photoId, CharSequence distance, Float rate) {
         this.name = name;
         this.description = description;
         this.photoId = photoId;
@@ -50,11 +50,11 @@ public class Place {
         this.photoId = photoId;
     }
 
-    public Double getDistance() {
+    public CharSequence getDistance() {
         return distance;
     }
 
-    public void setDistance(Double distance) {
+    public void setDistance(CharSequence distance) {
         this.distance = distance;
     }
 
