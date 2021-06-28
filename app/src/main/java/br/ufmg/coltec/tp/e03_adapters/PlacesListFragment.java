@@ -31,6 +31,8 @@ public class PlacesListFragment extends ListFragment {
     public void onListItemClick(ListView l, View v, int position, long id) {
         Place lugarSelecionado = this.lugares[position];
 
+        PlaceFragment pf = (PlaceFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.frag_place_details);
+        pf.atualizarLugar(lugarSelecionado);
         // TODO[4]: Recuperar PlaceFragment e atualizar o lugar
     }
 }
