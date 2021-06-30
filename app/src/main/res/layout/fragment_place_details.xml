@@ -26,6 +26,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@id/rtg_bar_rate"
         android:layout_alignLeft="@id/txt_place_name"
         android:layout_below="@id/txt_place_name"
         android:id="@+id/txt_place_description"

@@ -15,10 +15,10 @@
 
 <!--TODO[3] Incluir o componente de fragment que está faltando aqui! -->
     <androidx.fragment.app.FragmentContainerView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:name="br.ufmg.coltec.tp.e03_adapters.PlaceFragment"
-        android:id="@+id/frag_place"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="br.ufmg.coltec.tp.e03_adapters.PlaceFragment"
+        android:id="@+id/frag_place_details"
         tools:layout="@layout/fragment_place_details"
         android:layout_gravity="center_vertical"/>
 </LinearLayout>
