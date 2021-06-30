@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 
 public class MainActivity extends FragmentActivity {
 
@@ -12,5 +13,7 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        
     }
 }
