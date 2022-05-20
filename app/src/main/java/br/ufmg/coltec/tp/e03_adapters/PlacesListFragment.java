@@ -29,6 +29,17 @@ public class PlacesListFragment extends ListFragment {
     }
 
     @Override
+    public void onResume() {
+        Place lugarSelecionado = this.lugares[0];
+
+        FragmentManager manager = this.getActivity().getSupportFragmentManager();
+        PlaceDetailsFragment fragment = (PlaceDetailsFragment) manager.findFragmentById(R.id.frag_places_details);
+        fragment.atualizarLugar(lugarSelecionado);
+
+        super.onResume();
+    }
+
+    @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         Place lugarSelecionado = this.lugares[position];
 
