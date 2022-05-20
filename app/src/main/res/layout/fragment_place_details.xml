@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    tools:context=".PlaceDetailsFragment">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_launcher_background"
+        android:id="@+id/fragFoto"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome Lugar"
+        android:layout_toRightOf="@id/fragFoto"
+        android:layout_marginLeft="15dp"
+        android:textSize="20dp"
+        android:id="@+id/fragTitulo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descricao"
+        android:layout_toRightOf="@id/fragFoto"
+        android:layout_below="@id/fragTitulo"
+        android:layout_marginLeft="15dp"
+        android:textSize="15dp"
+        android:id="@+id/fragDesc"/>
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="3"
+        style="?android:attr/ratingBarStyleSmall"
+        android:id="@+id/fragRating"
+        android:layout_alignBottom="@id/fragFoto"
+        android:layout_toRightOf="@id/fragFoto"
+        android:layout_marginLeft="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="0 KM"
+        android:textSize="15dp"
+        android:layout_alignBottom="@id/fragFoto"
+        android:id="@+id/fragDistancia"/>
+
+</RelativeLayout>

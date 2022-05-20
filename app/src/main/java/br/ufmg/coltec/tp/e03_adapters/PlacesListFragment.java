@@ -6,16 +6,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.ListFragment;
 
 public class PlacesListFragment extends ListFragment {
 
     private Place[] lugares = {
-        new Place("Machu Picchu", "Cidade histórica do povo Inca", R.drawable.ic_machu_picchu, 3133.98, 4.f),
-        new Place("Alhambra", "Palácio árabe na cidade de Granada, ESP.", R.drawable.ic_alhambra, 7626.22, 5.f),
-        new Place("Bariloche", "Cidade turística ao sudoeste da Argentina", R.drawable.ic_bariloche, 3498.84, 4.f),
-        new Place("Coliseu", "Lugar de grandes espetáculos na época do Império Romano", R.drawable.ic_coliseu, 9318.41, 5.f),
-        new Place("Muralha da China", "Simplesmente a maior muralha do mundo!", R.drawable.ic_muralha_china, 17105.55, 3.5f)
+            new Place("Machu Picchu", "Cidade histórica do povo Inca", R.drawable.ic_machu_picchu, 3133.98, 4.f),
+            new Place("Alhambra", "Palácio árabe na cidade de Granada, ESP.", R.drawable.ic_alhambra, 7626.22, 5.f),
+            new Place("Bariloche", "Cidade turística ao sudoeste da Argentina", R.drawable.ic_bariloche, 3498.84, 4.f),
+            new Place("Coliseu", "Lugar de grandes espetáculos na época do Império Romano", R.drawable.ic_coliseu, 9318.41, 5.f),
+            new Place("Muralha da China", "Simplesmente a maior muralha do mundo!", R.drawable.ic_muralha_china, 17105.55, 3.5f)
     };
 
     @Override
@@ -31,6 +32,8 @@ public class PlacesListFragment extends ListFragment {
     public void onListItemClick(ListView l, View v, int position, long id) {
         Place lugarSelecionado = this.lugares[position];
 
-        // TODO[4]: Recuperar PlaceFragment e atualizar o lugar
+        FragmentManager manager = this.getActivity().getSupportFragmentManager();
+        PlaceDetailsFragment fragment = (PlaceDetailsFragment) manager.findFragmentById(R.id.frag_places_details);
+        fragment.atualizarLugar(lugarSelecionado);
     }
 }
