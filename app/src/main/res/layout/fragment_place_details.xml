@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagem"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_centerVertical="true"
+        android:paddingRight="15dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titulo"
+        android:text="Um lugar qualquer"
+        android:textSize="20dp"
+        android:layout_toRightOf="@id/imagem"
+        android:layout_alignTop="@id/imagem"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/subtitulo"
+        android:text="Este é um lugar qualquer que serve alguma coisa"
+        android:layout_toRightOf="@+id/imagem"
+        android:layout_below="@id/titulo"
+
+        />
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nota"
+        style="?android:attr/ratingBarStyleSmall"
+        android:numStars="5"
+        android:rating="3"
+        android:stepSize="0.5"
+        android:layout_alignBottom="@id/imagem"
+        android:layout_centerInParent="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/distancia"
+        android:text="10km"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/imagem"
+        />
+
+</RelativeLayout>
