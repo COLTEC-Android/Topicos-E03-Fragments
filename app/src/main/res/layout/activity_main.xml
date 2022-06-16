@@ -18,6 +18,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         class="br.ufmg.coltec.tp.e03_adapters.PlaceFragment"
-        android:id="@+id/fragment_place_details"
+        android:id="@+id/frag_place_details"
         />
 </LinearLayout>

@@ -6,6 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.fragment.app.ListFragment;
 
 public class PlacesListFragment extends ListFragment {
@@ -32,5 +35,8 @@ public class PlacesListFragment extends ListFragment {
         Place lugarSelecionado = this.lugares[position];
 
         // TODO[4]: Recuperar PlaceFragment e atualizar o lugar
+        FragmentManager fm = this.getActivity().getSupportFragmentManager();
+        PlaceFragment myFragment = (PlaceFragment) fm.findFragmentById(R.id.frag_place_details);
+        myFragment.atualizaLugar(lugarSelecionado);
     }
 }

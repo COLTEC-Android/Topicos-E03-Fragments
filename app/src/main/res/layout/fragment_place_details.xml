@@ -40,6 +40,7 @@
         android:stepSize="0.5"
         android:layout_alignBottom="@id/imagem"
         android:layout_centerInParent="true"
+        android:paddingLeft="10dp"
         />
     <TextView
         android:layout_width="wrap_content"
